@@ -106,8 +106,12 @@ def invoice_string_split(text):
     all_item = text.split('**********')[1]
     all_item_1 = all_item.split(':')
     all_item = []
+    all_item_2 = []
     for i in range(len(all_item_1)):
-        all_item.extend(all_item_1[i].split(';'))
+        all_item_2.extend(all_item_1[i].split(';'))
+    for i in range(len(all_item_2)):
+        all_item.extend(all_item_2[i].split('**'))
+
     all_item = all_item[4:]
     spending = []
     for i in range(len(all_item)/3):
