@@ -1,5 +1,4 @@
-## hackathon
+## SMART.LET - A HsinChu Hackthon Project
 # 
-Get users' spending data, then save to server.
-When the users is in a store, user can request for what supplied and best deal in store.
-# Server
+SMART.LET aim to guard you wallet.
+SMART.LET is the guardian of your wallet.
