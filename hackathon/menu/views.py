@@ -99,3 +99,19 @@ def csv_write(db_name, dict):
         rc = rc+str(dict[head[i]])+','
     c.write(rc)
     c.close()
+
+def invoice_string_split(text):
+    all_item = text.split('**********')[1]
+    all_item_1 = all_item.split(':')
+    all_item = []
+    for i in range(len(all_item_1)):
+        all_item.extend(all_item_1[i].split(';'))
+    all_item = all_item[4:]
+    spending = []
+    for i in range(len(all_item)/3):
+        r = {}
+        r[all_item[i*3]] = all_item[i*3+2]
+        spending.append(r)
+    
+    store_id = text.split(';')[0][45:53]
+    return {'store_id':store_id,'spending':spending}
