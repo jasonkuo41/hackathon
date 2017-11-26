@@ -6,6 +6,8 @@ import json
 import datetime
 # Create your views here.
 
+dbList={'uuid':'uuid.csv', 'test':'test.csv'}
+
 urls = {
     'google': "http://google.com/"
 }
